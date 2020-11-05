@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Basics</title>
+		<style>
+		body {
+			background-color: pink;
+			}
+		h1 {
+			color: white;
+			text-align: center;
+			font-size:150px;
+			}
+		img {
+			width: 100px;
+			height: 100px;
+			}
+		hr {
+			clear: both;
+			}
+		* {
+  			box-sizing: border-box;
+			}
+		.box {
+		float: left;
+		width: 50%;
+		padding: 150px;
+		}
+		.clearfix::after {
+		content: "";
+		clear: both;
+		display: table;
+		}
+		.me {
+		text-align: right;
+		font-family: monospace;
+		font-style: italic;
+		}
+		</style>
+		</head>
+
+
+<body>
+		<h1 class="h1"> &#9829 Shop now &#9829</h1>
+
+	<div class="clearfix">
+		<div class="box">
+			<img src="https://pbs.twimg.com/profile_images/1088473639526244354/w7-HhhWa_400x400.jpg" >
+			<p><a href="https://www.tori.fi/" title="tori.fi"> tori.fi </p></a>
+		</div>
+		<div class="box">
+			<img src="https://www.plantagen.fi/on/demandware.static/Sites-PlantagenFI-Site/-/default/dw02a2c6d6/images/plantagen.svg" >
+			<p><a href="https://www.plantagen.fi/perunat/" title="plantagen.fi"> plantagen.fi </p></a>
+		</div>
+	  </div>
+	<hr>
+
+</body>
+
+
+<div class="me">
+	<p>© eprusako 2020</p>
+  </div>
+</html>

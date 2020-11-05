@@ -17,6 +17,7 @@
 /logs/*
 !/logs/empty
 
+.DS_Store
 # CakePHP 2
 
 /app/tmp/*
