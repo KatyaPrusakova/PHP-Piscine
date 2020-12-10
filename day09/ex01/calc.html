@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="refresh" content="x" >
+		<meta charset="utf-8">
+	</head>
+	<style>
+		.wow {
+			display: grid;
+		}
+		#input {
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+<body>
+	<input type="text"  class=wow placeholder="First number" id="first_num">
+	<p>
+		<select class="options" name="options">
+			<option id="plus">'+'</option>
+			<option id="minus">'-'</option>
+			<option id="mult">'*'</option>
+			<option id="procent">'%'</option>
+			<option id="divide">'/'</option>
+		</select>
+	</p>
+	<input type="text"  class=wow placeholder="Second number" id="second_num">
+	<br>
+    <button type="button" onclick="getInputValue();">Try me!</button>
+</div>
+
+<script>
+ function getInputValue(){
+
+	// Selecting the input element and get its value
+			first_num = parseInt(document.getElementById("first_num").value);
+			second_num = parseInt(document.getElementById("second_num").value);
+
+			pl = document.getElementById("plus").selected;
+			minus = document.getElementById("minus").selected;
+			mult = document.getElementById("mult").selected;
+			procent = document.getElementById("procent").selected;
+			divide = document.getElementById("divide").selected;
+
+			if (first_num < 0 || second_num < 0)
+			{
+				alert("Error :(");
+				return false;
+			}
+			if (divide || procent && first_num == 0 || second_num == 0)
+			{
+					alert("It's over 9000!");
+					if (procent)
+						console.log(first_num % second_num);
+					if (divide)
+						console.log(first_num / second_num);
+					return false;
+			}
+			if (pl)
+			{
+				alert(first_num + second_num);
+				console.log(first_num + second_num);
+
+			}
+			else if (minus)
+			{
+				alert(first_num - second_num);
+				console.log(first_num - second_num);
+			}
+			else if (mult)
+			{
+				alert(first_num * second_num);
+				console.log(first_num * second_num);
+			}
+			else if (procent)
+			{
+				alert(first_num % second_num);
+				console.log(first_num % second_num);
+
+			}
+			else if (divide)
+			{
+				alert(first_num / second_num);
+				console.log(first_num / second_num);
+			}
+ }
+	// Alert every 30 sec
+	function blah(){
+		alert("Please, use me...");
+	}
+
+		blah();
+		setInterval(blah,30000);
+
+</script>
+
+</body>
+</html>
